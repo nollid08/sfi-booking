@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	:root {
+		--background: 205, 100%, 59%; /* Bright blue gradient background */
+		--foreground: 0 0% 100%; /* White */
+		--card: 0 0% 100%; /* White card background */
+		--card-foreground: 240 10% 3.9%; /* Dark text for contrast on white */
+		--popover: 220 90% 50%; /* Match background */
+		--popover-foreground: 0 0% 100%; /* White */
+		--primary: 0 0% 100%; /* White */
+		--primary-foreground: 220 90% 50%; /* Match background */
+		--secondary: 0 0% 100%; /* White */
+		--secondary-foreground: 220 90% 50%; /* Match background */
+		--muted: 0 0% 100%; /* White */
+		--muted-foreground: 208, 100%, 95%%; /* Match background */
+		--accent: 0 0% 100%; /* White */
+		--accent-foreground: 220 90% 50%; /* Match background */
+		--destructive: 0 72.22% 50.59%; /* Red */
+		--destructive-foreground: 0 0% 100%; /* White */
+		--border: 0 0% 100%; /* White */
+		--input: 0 0% 100%; /* White */
+		--ring: 0 0% 100%; /* White */
+		--radius: 0.5rem; /* Keep as is */
+	}
+	.dark {
+		--background: 222.2 84% 4.9%;
+		--foreground: 210 40% 98%;
+		--card: 222.2 84% 4.9%;
+		--card-foreground: 210 40% 98%;
+		--popover: 222.2 84% 4.9%;
+		--popover-foreground: 210 40% 98%;
+		--primary: 217.2 91.2% 59.8%;
+		--primary-foreground: 222.2 47.4% 11.2%;
+		--secondary: 217.2 32.6% 17.5%;
+		--secondary-foreground: 210 40% 98%;
+		--muted: 217.2 32.6% 17.5%;
+		--muted-foreground: 215 20.2% 65.1%;
+		--accent: 217.2 32.6% 17.5%;
+		--accent-foreground: 210 40% 98%;
+		--destructive: 0 62.8% 30.6%;
+		--destructive-foreground: 210 40% 98%;
+		--border: 217.2 32.6% 17.5%;
+		--input: 217.2 32.6% 17.5%;
+		--ring: 224.3 76.3% 48%;
+	}
+}
+
+@layer base {
+	* {
+		@apply border-border;
+	}
+	body {
+		@apply bg-background text-foreground;
+	}
+}
+body {
+	background-color: hsla(218, 97%, 59%, 1);
+	background-image: radial-gradient(
+			at 36% 31%,
+			hsla(203, 100%, 59%, 1) 0px,
+			transparent 50%
+		),
+		radial-gradient(at 66% 30%, hsla(203, 100%, 59%, 1) 0px, transparent 50%),
+		radial-gradient(at 53% 69%, hsla(203, 100%, 59%, 1) 0px, transparent 50%);
+	background-size: cover;
+	min-height: 100vh;
+	min-width: 100vh;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: #ffffff;
+    transition: background-color 5000s ease-in-out 0s;
+    box-shadow: inset 0 0 20px 20px #23232329;
+}
